@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <StarsChart />
     <div id="nav">
       <router-link to="/">Home</router-link>
       |
@@ -31,3 +32,13 @@
   color: #42b983;
 }
 </style>
+<script>
+import StarsChart from "./components/StarsChart.vue";
+
+export default {
+  name: "App",
+  components: {
+    StarsChart,
+  },
+};
+</script>
