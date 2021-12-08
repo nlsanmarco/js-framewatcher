@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <div>
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <HelloWorld msg="Welcome to Your Vue.js App" />
       <h1>Stars:</h1>
       <h4>vue stars: {{ vue_stats.stargazers_count }}</h4>
       <h4>angular stars: {{ angular_stats.stargazers_count }}</h4>
@@ -31,8 +33,13 @@
 
 <script>
 import axios from "axios";
+import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
+  name: "Home",
+  components: {
+    HelloWorld,
+  },
   data: function () {
     return {
       vue_stats: {},
