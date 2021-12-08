@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <div>
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <HelloWorld msg="Welcome to Your Vue.js App" />
+      <div>
+        <h3>Bar Chart Example in Vue</h3>
+        <star-chart></star-chart>
+      </div>
       <h1>Stars:</h1>
       <h4>vue stars: {{ vue_stats.stargazers_count }}</h4>
       <h4>angular stars: {{ angular_stats.stargazers_count }}</h4>
@@ -33,12 +35,11 @@
 
 <script>
 import axios from "axios";
-import HelloWorld from "@/components/HelloWorld.vue";
+import StarChart from "@/components/StarsChart";
 
 export default {
-  name: "Home",
   components: {
-    HelloWorld,
+    StarChart,
   },
   data: function () {
     return {
